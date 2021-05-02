@@ -16,6 +16,7 @@
 		A6CC4ADE263F492E00A52AD5 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC4ADC263F492E00A52AD5 /* ImageCell.swift */; };
 		A6CC4ADF263F492E00A52AD5 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6CC4ADD263F492E00A52AD5 /* ImageCell.xib */; };
 		A6CC4AE3263F4D8700A52AD5 /* GalleryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC4AE2263F4D8700A52AD5 /* GalleryData.swift */; };
+		A6CC4AE7263F538700A52AD5 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC4AE6263F538700A52AD5 /* GalleryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A6CC4ADC263F492E00A52AD5 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		A6CC4ADD263F492E00A52AD5 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		A6CC4AE2263F4D8700A52AD5 /* GalleryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryData.swift; sourceTree = "<group>"; };
+		A6CC4AE6263F538700A52AD5 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		A6CC4AC0263F405E00A52AD5 /* TestGallery */ = {
 			isa = PBXGroup;
 			children = (
+				A6CC4AE5263F536D00A52AD5 /* Model */,
 				A6CC4ADB263F488C00A52AD5 /* GalleryCells */,
 				A6CC4AC1263F405E00A52AD5 /* AppDelegate.swift */,
 				A6CC4AC3263F405E00A52AD5 /* SceneDelegate.swift */,
@@ -82,6 +85,14 @@
 				A6CC4ADD263F492E00A52AD5 /* ImageCell.xib */,
 			);
 			path = GalleryCells;
+			sourceTree = "<group>";
+		};
+		A6CC4AE5263F536D00A52AD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC4AE6263F538700A52AD5 /* GalleryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 				A6CC4AD8263F476100A52AD5 /* GalleryViewController.swift in Sources */,
 				A6CC4ADE263F492E00A52AD5 /* ImageCell.swift in Sources */,
 				A6CC4AC2263F405E00A52AD5 /* AppDelegate.swift in Sources */,
+				A6CC4AE7263F538700A52AD5 /* GalleryModel.swift in Sources */,
 				A6CC4AC4263F405E00A52AD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

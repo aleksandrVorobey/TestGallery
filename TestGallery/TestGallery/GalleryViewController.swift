@@ -14,6 +14,7 @@ class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.collectionView.isPagingEnabled = true
         self.collectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
