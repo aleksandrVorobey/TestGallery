@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageCell" customModule="TestGallery" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="ImageCell" customModule="TestGallery" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="267" height="311"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -41,6 +41,10 @@
                 <constraint firstAttribute="trailing" secondItem="WnT-yU-Jjh" secondAttribute="trailing" id="wgi-O4-pCb"/>
             </constraints>
             <size key="customSize" width="267" height="311"/>
+            <connections>
+                <outlet property="imageGallery" destination="WnT-yU-Jjh" id="Sbq-X8-QDp"/>
+                <outlet property="userNameLabel" destination="gq7-so-kGF" id="5ha-jw-sVD"/>
+            </connections>
             <point key="canvasLocation" x="119.56521739130436" y="118.86160714285714"/>
         </collectionViewCell>
     </objects>
