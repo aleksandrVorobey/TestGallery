@@ -17,6 +17,7 @@
 		A6CC4ADF263F492E00A52AD5 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6CC4ADD263F492E00A52AD5 /* ImageCell.xib */; };
 		A6CC4AE3263F4D8700A52AD5 /* GalleryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC4AE2263F4D8700A52AD5 /* GalleryData.swift */; };
 		A6CC4AE7263F538700A52AD5 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC4AE6263F538700A52AD5 /* GalleryModel.swift */; };
+		A6CC4AEC263F5DFC00A52AD5 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC4AEB263F5DFB00A52AD5 /* NetworkDataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A6CC4ADD263F492E00A52AD5 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		A6CC4AE2263F4D8700A52AD5 /* GalleryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryData.swift; sourceTree = "<group>"; };
 		A6CC4AE6263F538700A52AD5 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		A6CC4AEB263F5DFB00A52AD5 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		A6CC4AC0263F405E00A52AD5 /* TestGallery */ = {
 			isa = PBXGroup;
 			children = (
+				A6CC4AEA263F5C2100A52AD5 /* Service */,
 				A6CC4AE5263F536D00A52AD5 /* Model */,
 				A6CC4ADB263F488C00A52AD5 /* GalleryCells */,
 				A6CC4AC1263F405E00A52AD5 /* AppDelegate.swift */,
@@ -93,6 +96,14 @@
 				A6CC4AE6263F538700A52AD5 /* GalleryModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A6CC4AEA263F5C2100A52AD5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC4AEB263F5DFB00A52AD5 /* NetworkDataFetcher.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6CC4AEC263F5DFC00A52AD5 /* NetworkDataFetcher.swift in Sources */,
 				A6CC4AE3263F4D8700A52AD5 /* GalleryData.swift in Sources */,
 				A6CC4AD8263F476100A52AD5 /* GalleryViewController.swift in Sources */,
 				A6CC4ADE263F492E00A52AD5 /* ImageCell.swift in Sources */,
