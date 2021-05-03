@@ -17,14 +17,14 @@ class ImageCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configure(with urlString: String) {
+    func configure(with urlString: String, userName: GalleryModel) {
         guard let imageUrl = URL(string: urlString) else { return }
-        
         let task = URLSession.shared.dataTask(with: imageUrl) { [weak self] (data, _, error) in
             guard let data = data,  error == nil else { return }
             DispatchQueue.main.async {
                 let image = UIImage(data: data)
                 self?.imageGallery.image = image
+                self?.userNameLabel.text = userName.userName
             }
         }
         task.resume()

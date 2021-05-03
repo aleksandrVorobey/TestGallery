@@ -10,8 +10,8 @@ import UIKit
 class GalleryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let url = "http://dev.bgsoft.biz/task/credits.json"
-    let baseURL = "http://dev.bgsoft.biz/task/"
+    private let url = "http://dev.bgsoft.biz/task/credits.json"
+    private let baseURL = "http://dev.bgsoft.biz/task/"
     var galleryModel = [GalleryModel]()
     
     override func viewDidLoad() {
@@ -29,12 +29,14 @@ class GalleryViewController: UIViewController {
     
     func fetchData() {
         NetworkDataFetcher.fetchImages(from: url) { (dataDictionary) in
-            guard let data = dataDictionary else { return }
-            for (key, value) in data {
-                let galleryModel = GalleryModel(imageURL: key, photoURL: value.photoURL, userURL: value.userURL, userName: value.userName)
-                self.galleryModel.append(galleryModel)
-                print(self.galleryModel.count)
+                guard let data = dataDictionary else { return }
+                for (key, value) in data {
+                    let galleryModel = GalleryModel(imageURL: key, photoURL: value.photoURL, userURL: value.userURL, userName: value.userName)
+                    DispatchQueue.main.async {
+                        self.galleryModel.append(galleryModel)
+                    }
             }
+                //print(self.galleryModel.count)
         }
     }
 }
@@ -42,11 +44,13 @@ class GalleryViewController: UIViewController {
 extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        0
+        galleryModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
+        let galleryModelItem = galleryModel[indexPath.item]
+        cell.configure(with: "\(baseURL)\(galleryModelItem.imageURL).jpg", userName: galleryModelItem)
         return cell
     }
     

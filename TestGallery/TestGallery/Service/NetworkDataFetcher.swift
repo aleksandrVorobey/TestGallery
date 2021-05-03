@@ -16,7 +16,9 @@ class NetworkDataFetcher {
             guard let data = data, error == nil else { return }
             do {
                 let fetchDictionary = try JSONDecoder().decode(GalleryDictionary.self, from: data)
-                completion(fetchDictionary)
+                DispatchQueue.main.async {
+                    completion(fetchDictionary)
+                }
             } catch let error {
                 print("Error: \(error.localizedDescription)")
             }
