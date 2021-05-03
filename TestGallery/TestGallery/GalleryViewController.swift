@@ -10,20 +10,33 @@ import UIKit
 class GalleryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var network = NetworkDataFetcher()
+    let url = "http://dev.bgsoft.biz/task/credits.json"
+    let baseURL = "http://dev.bgsoft.biz/task/"
+    var galleryModel = [GalleryModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        network.fetchImages()
+      
+        fetchData()
+        print(galleryModel.count)
         
         self.collectionView.isPagingEnabled = true
         self.collectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
     }
-
-
+    
+    func fetchData() {
+        NetworkDataFetcher.fetchImages(from: url) { (dataDictionary) in
+            guard let data = dataDictionary else { return }
+            for (key, value) in data {
+                let galleryModel = GalleryModel(imageURL: key, photoURL: value.photoURL, userURL: value.userURL, userName: value.userName)
+                self.galleryModel.append(galleryModel)
+                print(self.galleryModel.count)
+            }
+        }
+    }
 }
 
 extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate {
