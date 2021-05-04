@@ -17,9 +17,11 @@ class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
         fetchData()
-        print(galleryModel.count)
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+        
         
         self.collectionView.isPagingEnabled = true
         self.collectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
@@ -32,19 +34,16 @@ class GalleryViewController: UIViewController {
                 guard let data = dataDictionary else { return }
                 for (key, value) in data {
                     let galleryModel = GalleryModel(imageURL: key, photoURL: value.photoURL, userURL: value.userURL, userName: value.userName)
-                    DispatchQueue.main.async {
-                        self.galleryModel.append(galleryModel)
-                    }
+                    self.galleryModel.append(galleryModel)
             }
-                //print(self.galleryModel.count)
         }
     }
 }
 
-extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        galleryModel.count
+        return galleryModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,5 +57,8 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
     
 }
