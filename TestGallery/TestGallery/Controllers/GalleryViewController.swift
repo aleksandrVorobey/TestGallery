@@ -50,7 +50,7 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
         let galleryModelItem = galleryModel[indexPath.item]
-        cell.configure(with: "\(baseURL)\(galleryModelItem.imageURL).jpg", userModel: galleryModelItem)
+        cell.configure(with: "\(baseURL)\(galleryModelItem.imageURL).jpg", userName: galleryModelItem)
         return cell
     }
     

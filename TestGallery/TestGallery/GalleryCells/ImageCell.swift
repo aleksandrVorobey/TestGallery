@@ -22,12 +22,12 @@ class ImageCell: UICollectionViewCell {
         userNameLabel.text = nil
     }
     
-    func configure(with urlString: String, userName: GalleryModel) {
+    func configure(with urlString: String, userModel: GalleryModel) {
         DispatchQueue.global().async {
             guard let imageUrl = URL(string: urlString), let imageData = try? Data(contentsOf: imageUrl) else { return }
             DispatchQueue.main.async {
                 self.imageGallery.image = UIImage(data: imageData)
-                self.userNameLabel.text = userName.userName
+                self.userNameLabel.text = userModel.userName
             }
         }
     }
