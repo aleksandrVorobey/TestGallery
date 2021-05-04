@@ -14,7 +14,6 @@ class ImageCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     override func prepareForReuse() {
@@ -24,16 +23,12 @@ class ImageCell: UICollectionViewCell {
     }
     
     func configure(with urlString: String, userName: GalleryModel) {
-        guard let imageUrl = URL(string: urlString) else { return }
-        let task = URLSession.shared.dataTask(with: imageUrl) { [weak self] (data, _, error) in
-            guard let data = data,  error == nil else { return }
-            let image = UIImage(data: data)
+        DispatchQueue.global().async {
+            guard let imageUrl = URL(string: urlString), let imageData = try? Data(contentsOf: imageUrl) else { return }
             DispatchQueue.main.async {
-                self?.imageGallery.image = image
-                self?.userNameLabel.text = userName.userName
+                self.imageGallery.image = UIImage(data: imageData)
+                self.userNameLabel.text = userName.userName
             }
         }
-        task.resume()
     }
-
 }

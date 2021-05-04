@@ -18,10 +18,6 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         
         fetchData()
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
-        
         
         self.collectionView.isPagingEnabled = true
         self.collectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
@@ -35,6 +31,10 @@ class GalleryViewController: UIViewController {
                 for (key, value) in data {
                     let galleryModel = GalleryModel(imageURL: key, photoURL: value.photoURL, userURL: value.userURL, userName: value.userName)
                     self.galleryModel.append(galleryModel)
+                    self.galleryModel = self.galleryModel.sorted {$0.userName < $1.userName}
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
             }
         }
     }
@@ -43,6 +43,7 @@ class GalleryViewController: UIViewController {
 extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("Count: \(self.galleryModel.count)")
         return galleryModel.count
     }
     
