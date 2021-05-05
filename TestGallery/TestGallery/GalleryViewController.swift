@@ -25,10 +25,6 @@ class GalleryViewController: UIViewController {
         self.collectionView.delegate = self
     }
     
-//    override func performSegue(withIdentifier identifier: "Description", sender: Any?) {
-//        <#code#>
-//    }
-    
     func fetchData() {
         NetworkDataFetcher.fetchImages(from: url) { (dataDictionary) in
                 guard let data = dataDictionary else { return }
@@ -47,23 +43,26 @@ class GalleryViewController: UIViewController {
 extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("Count: \(self.galleryModel.count)")
         return galleryModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
         let galleryModelItem = galleryModel[indexPath.item]
-        cell.configure(with: "\(baseURL)\(galleryModelItem.imageURL).jpg", userModel: galleryModelItem)
+        cell.configure(with: "\(baseURL)\(galleryModelItem.imageURL).jpg", userModel: galleryModelItem, cell: cell)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        return CGSize(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height - 150)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
 }

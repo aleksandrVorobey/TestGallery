@@ -11,17 +11,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="ImageCell" customModule="TestGallery" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="356" height="424"/>
+            <rect key="frame" x="0.0" y="0.0" width="361" height="449"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="356" height="424"/>
+                <rect key="frame" x="0.0" y="0.0" width="361" height="449"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WnT-yU-Jjh">
-                        <rect key="frame" x="5" y="50" width="346" height="354"/>
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="449"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-so-kGF">
-                        <rect key="frame" x="0.0" y="379" width="351" height="45"/>
+                        <rect key="frame" x="0.0" y="404" width="356" height="45"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="Bcs-lL-6q9"/>
                         </constraints>
@@ -32,7 +32,7 @@
                         <size key="shadowOffset" width="2" height="-1"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PhotoURL" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-xH-ZB5">
-                        <rect key="frame" x="10" y="60" width="336" height="45"/>
+                        <rect key="frame" x="10" y="60" width="341" height="45"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="UOs-qL-q3k"/>
@@ -43,7 +43,7 @@
                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                     </textView>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="NameURL" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bfw-DC-dML">
-                        <rect key="frame" x="10" y="115" width="336" height="45"/>
+                        <rect key="frame" x="10" y="115" width="341" height="45"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="PFr-fx-IJ4"/>
@@ -56,29 +56,35 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Tre-xH-ZB5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="4qR-aL-gY4"/>
-                <constraint firstItem="WnT-yU-Jjh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="9dz-ZE-35O"/>
+                <constraint firstItem="WnT-yU-Jjh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9dz-ZE-35O"/>
                 <constraint firstAttribute="trailing" secondItem="bfw-DC-dML" secondAttribute="trailing" constant="10" id="F00-qk-8Pj"/>
-                <constraint firstAttribute="bottom" secondItem="WnT-yU-Jjh" secondAttribute="bottom" constant="20" id="KXo-K8-Nqi"/>
-                <constraint firstItem="WnT-yU-Jjh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="50" id="M8A-0r-3hC"/>
+                <constraint firstAttribute="bottom" secondItem="WnT-yU-Jjh" secondAttribute="bottom" id="KXo-K8-Nqi"/>
+                <constraint firstItem="WnT-yU-Jjh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="M8A-0r-3hC"/>
                 <constraint firstItem="gq7-so-kGF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PQo-4u-mp5"/>
                 <constraint firstAttribute="bottom" secondItem="gq7-so-kGF" secondAttribute="bottom" symbolic="YES" id="RqA-76-XbE"/>
                 <constraint firstItem="bfw-DC-dML" firstAttribute="top" secondItem="Tre-xH-ZB5" secondAttribute="bottom" constant="10" id="aiy-fB-xnK"/>
                 <constraint firstItem="bfw-DC-dML" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="fcu-0t-XKU"/>
                 <constraint firstItem="Tre-xH-ZB5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="60" id="hDu-ME-XV9"/>
                 <constraint firstAttribute="trailing" secondItem="gq7-so-kGF" secondAttribute="trailing" constant="5" id="nX7-0r-ESl"/>
-                <constraint firstAttribute="trailing" secondItem="WnT-yU-Jjh" secondAttribute="trailing" constant="5" id="wgi-O4-pCb"/>
+                <constraint firstAttribute="trailing" secondItem="WnT-yU-Jjh" secondAttribute="trailing" id="wgi-O4-pCb"/>
                 <constraint firstAttribute="trailing" secondItem="Tre-xH-ZB5" secondAttribute="trailing" constant="10" id="zLd-Oh-MFa"/>
             </constraints>
-            <size key="customSize" width="356" height="424"/>
+            <size key="customSize" width="361" height="449"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="34"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="imageGallery" destination="WnT-yU-Jjh" id="Sbq-X8-QDp"/>
                 <outlet property="nameURL" destination="bfw-DC-dML" id="G4J-ql-AvM"/>
                 <outlet property="photoURL" destination="Tre-xH-ZB5" id="CCS-nd-BHj"/>
                 <outlet property="userNameLabel" destination="gq7-so-kGF" id="5ha-jw-sVD"/>
             </connections>
-            <point key="canvasLocation" x="55.072463768115945" y="156.69642857142856"/>
+            <point key="canvasLocation" x="-5" y="191"/>
         </collectionViewCell>
     </objects>
     <resources>
