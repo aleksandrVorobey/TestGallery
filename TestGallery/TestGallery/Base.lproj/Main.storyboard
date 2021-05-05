@@ -45,37 +45,6 @@
             </objects>
             <point key="canvasLocation" x="-206" y="83"/>
         </scene>
-        <!--Web View Controller-->
-        <scene sceneID="psG-Et-Sb4">
-            <objects>
-                <viewController id="U9R-Rf-FPt" customClass="WebViewController" customModule="TestGallery" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oih-Pb-J3p">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1x-TD-2Lf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ggl-0D-0Qp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ggl-0D-0Qp" firstAttribute="bottom" secondItem="u1x-TD-2Lf" secondAttribute="bottom" id="KBH-c4-jif"/>
-                            <constraint firstItem="u1x-TD-2Lf" firstAttribute="leading" secondItem="ggl-0D-0Qp" secondAttribute="leading" id="miZ-BV-pP5"/>
-                            <constraint firstItem="ggl-0D-0Qp" firstAttribute="trailing" secondItem="u1x-TD-2Lf" secondAttribute="trailing" id="y5P-an-Kyk"/>
-                            <constraint firstItem="u1x-TD-2Lf" firstAttribute="top" secondItem="ggl-0D-0Qp" secondAttribute="top" id="zm7-0w-XSm"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eRu-EE-9ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="481" y="82"/>
-        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WnT-yU-Jjh">
-                        <rect key="frame" x="0.0" y="0.0" width="356" height="424"/>
+                        <rect key="frame" x="5" y="50" width="346" height="354"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-so-kGF">
-                        <rect key="frame" x="0.0" y="379" width="356" height="45"/>
+                        <rect key="frame" x="0.0" y="379" width="351" height="45"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="Bcs-lL-6q9"/>
                         </constraints>
@@ -31,7 +31,7 @@
                         <color key="shadowColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <size key="shadowOffset" width="2" height="-1"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="PhotoURL" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-xH-ZB5">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PhotoURL" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-xH-ZB5">
                         <rect key="frame" x="10" y="60" width="336" height="45"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -42,7 +42,7 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                     </textView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="NameURL" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bfw-DC-dML">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="NameURL" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bfw-DC-dML">
                         <rect key="frame" x="10" y="115" width="336" height="45"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -58,17 +58,17 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="Tre-xH-ZB5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="4qR-aL-gY4"/>
-                <constraint firstItem="WnT-yU-Jjh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9dz-ZE-35O"/>
+                <constraint firstItem="WnT-yU-Jjh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="9dz-ZE-35O"/>
                 <constraint firstAttribute="trailing" secondItem="bfw-DC-dML" secondAttribute="trailing" constant="10" id="F00-qk-8Pj"/>
-                <constraint firstAttribute="bottom" secondItem="WnT-yU-Jjh" secondAttribute="bottom" id="KXo-K8-Nqi"/>
-                <constraint firstItem="WnT-yU-Jjh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="M8A-0r-3hC"/>
+                <constraint firstAttribute="bottom" secondItem="WnT-yU-Jjh" secondAttribute="bottom" constant="20" id="KXo-K8-Nqi"/>
+                <constraint firstItem="WnT-yU-Jjh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="50" id="M8A-0r-3hC"/>
                 <constraint firstItem="gq7-so-kGF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PQo-4u-mp5"/>
                 <constraint firstAttribute="bottom" secondItem="gq7-so-kGF" secondAttribute="bottom" symbolic="YES" id="RqA-76-XbE"/>
                 <constraint firstItem="bfw-DC-dML" firstAttribute="top" secondItem="Tre-xH-ZB5" secondAttribute="bottom" constant="10" id="aiy-fB-xnK"/>
                 <constraint firstItem="bfw-DC-dML" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="fcu-0t-XKU"/>
                 <constraint firstItem="Tre-xH-ZB5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="60" id="hDu-ME-XV9"/>
-                <constraint firstAttribute="trailing" secondItem="gq7-so-kGF" secondAttribute="trailing" id="nX7-0r-ESl"/>
-                <constraint firstAttribute="trailing" secondItem="WnT-yU-Jjh" secondAttribute="trailing" id="wgi-O4-pCb"/>
+                <constraint firstAttribute="trailing" secondItem="gq7-so-kGF" secondAttribute="trailing" constant="5" id="nX7-0r-ESl"/>
+                <constraint firstAttribute="trailing" secondItem="WnT-yU-Jjh" secondAttribute="trailing" constant="5" id="wgi-O4-pCb"/>
                 <constraint firstAttribute="trailing" secondItem="Tre-xH-ZB5" secondAttribute="trailing" constant="10" id="zLd-Oh-MFa"/>
             </constraints>
             <size key="customSize" width="356" height="424"/>

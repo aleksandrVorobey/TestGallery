@@ -21,6 +21,7 @@ class ImageCell: UICollectionViewCell {
         nameURL.isEditable = false
         photoURL.isHidden = true
         nameURL.isHidden = true
+        imageGallery.layer.cornerRadius = 35
     }
     
     override func prepareForReuse() {

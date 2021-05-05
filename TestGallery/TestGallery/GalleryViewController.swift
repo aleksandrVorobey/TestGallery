@@ -25,6 +25,10 @@ class GalleryViewController: UIViewController {
         self.collectionView.delegate = self
     }
     
+//    override func performSegue(withIdentifier identifier: "Description", sender: Any?) {
+//        <#code#>
+//    }
+    
     func fetchData() {
         NetworkDataFetcher.fetchImages(from: url) { (dataDictionary) in
                 guard let data = dataDictionary else { return }
