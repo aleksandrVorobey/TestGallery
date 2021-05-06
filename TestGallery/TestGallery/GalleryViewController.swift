@@ -61,6 +61,7 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
         let galleryModelItem = galleryModel[indexPath.item]
         cell.configure(with: "\(baseURL)\(galleryModelItem.imageURL).jpg", userModel: galleryModelItem, cell: cell)
+        cell.delegate = self
         return cell
     }
     
@@ -76,4 +77,14 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
+}
+
+extension GalleryViewController: ImageCellDelegate {
+    func delete(cell: ImageCell) {
+        if let indexPath = collectionView.indexPath(for: cell) {
+            galleryModel.remove(at: indexPath.item)
+            collectionView.deleteItems(at: [indexPath])
+        }
+    }
+
 }

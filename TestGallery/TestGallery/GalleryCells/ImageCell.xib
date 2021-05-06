@@ -53,6 +53,16 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                     </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waU-5z-Bqj">
+                        <rect key="frame" x="258.5" y="10" width="92.5" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        <state key="normal" title="Delete" image="trash" catalog="system">
+                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="JHC-x2-hkD"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -62,6 +72,7 @@
                 <constraint firstItem="WnT-yU-Jjh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9dz-ZE-35O"/>
                 <constraint firstAttribute="trailing" secondItem="bfw-DC-dML" secondAttribute="trailing" constant="10" id="F00-qk-8Pj"/>
                 <constraint firstAttribute="bottom" secondItem="WnT-yU-Jjh" secondAttribute="bottom" id="KXo-K8-Nqi"/>
+                <constraint firstAttribute="trailing" secondItem="waU-5z-Bqj" secondAttribute="trailing" constant="10" id="LbX-6r-yLj"/>
                 <constraint firstItem="WnT-yU-Jjh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="M8A-0r-3hC"/>
                 <constraint firstItem="gq7-so-kGF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PQo-4u-mp5"/>
                 <constraint firstAttribute="bottom" secondItem="gq7-so-kGF" secondAttribute="bottom" symbolic="YES" id="RqA-76-XbE"/>
@@ -70,6 +81,7 @@
                 <constraint firstItem="Tre-xH-ZB5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="60" id="hDu-ME-XV9"/>
                 <constraint firstAttribute="trailing" secondItem="gq7-so-kGF" secondAttribute="trailing" constant="5" id="nX7-0r-ESl"/>
                 <constraint firstAttribute="trailing" secondItem="WnT-yU-Jjh" secondAttribute="trailing" id="wgi-O4-pCb"/>
+                <constraint firstItem="waU-5z-Bqj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="yV3-Wp-cck"/>
                 <constraint firstAttribute="trailing" secondItem="Tre-xH-ZB5" secondAttribute="trailing" constant="10" id="zLd-Oh-MFa"/>
             </constraints>
             <size key="customSize" width="361" height="449"/>
@@ -79,15 +91,17 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="deleteButton" destination="waU-5z-Bqj" id="YCZ-1b-s2n"/>
                 <outlet property="imageGallery" destination="WnT-yU-Jjh" id="Sbq-X8-QDp"/>
                 <outlet property="nameURL" destination="bfw-DC-dML" id="G4J-ql-AvM"/>
                 <outlet property="photoURL" destination="Tre-xH-ZB5" id="CCS-nd-BHj"/>
                 <outlet property="userNameLabel" destination="gq7-so-kGF" id="5ha-jw-sVD"/>
             </connections>
-            <point key="canvasLocation" x="-5" y="191"/>
+            <point key="canvasLocation" x="-102" y="-382"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

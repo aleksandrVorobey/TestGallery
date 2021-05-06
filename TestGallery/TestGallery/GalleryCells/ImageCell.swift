@@ -7,12 +7,19 @@
 
 import UIKit
 
+protocol ImageCellDelegate: class {
+    func delete(cell: ImageCell)
+}
+
 class ImageCell: UICollectionViewCell {
     
     @IBOutlet weak var imageGallery: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var photoURL: UITextView!
     @IBOutlet weak var nameURL: UITextView!
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    weak var delegate: ImageCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +27,18 @@ class ImageCell: UICollectionViewCell {
         nameURL.isEditable = false
         photoURL.isHidden = true
         nameURL.isHidden = true
+        deleteButton.isHidden = true
         imageGallery.layer.cornerRadius = 34
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageGallery.image = nil
+        userNameLabel.text = nil
+    }
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        delegate?.delete(cell: self)
     }
     
     func shadow() {
@@ -36,15 +54,7 @@ class ImageCell: UICollectionViewCell {
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        imageGallery.image = nil
-        userNameLabel.text = nil
-    }
-    
-    
-    
-    func configure(with urlString: String, userModel: GalleryModel, cell: UICollectionViewCell) {
+        func configure(with urlString: String, userModel: GalleryModel, cell: UICollectionViewCell) {
         DispatchQueue.global().async {
             guard let imageUrl = URL(string: urlString), let imageData = try? Data(contentsOf: imageUrl) else { return }
             DispatchQueue.main.async {
@@ -60,6 +70,7 @@ class ImageCell: UICollectionViewCell {
                 let atributNameURL = NSMutableAttributedString(string: stringNameURL, attributes: [NSAttributedString.Key.link: URL(string: userModel.userURL)!])
                 self.nameURL.attributedText = atributNameURL
                 self.nameURL.isHidden = false
+                self.deleteButton.isHidden = false
                 
                 self.shadow()
             }
