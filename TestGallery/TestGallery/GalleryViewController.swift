@@ -18,11 +18,22 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         
         fetchData()
+        carousel()
         
         self.collectionView.isPagingEnabled = true
         self.collectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+    }
+    
+    func carousel() {
+        let floawLayaout = UPCarouselFlowLayout()
+        floawLayaout.itemSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.height)
+        floawLayaout.scrollDirection = .horizontal
+        floawLayaout.sideItemScale = 0.8
+        floawLayaout.sideItemAlpha = 1.0
+        floawLayaout.spacingMode = .fixed(spacing: 5.0)
+        collectionView.collectionViewLayout = floawLayaout
     }
     
     func fetchData() {

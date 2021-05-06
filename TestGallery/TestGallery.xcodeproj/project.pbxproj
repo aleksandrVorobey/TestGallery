@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A63A06EA2643E0C700F8399C /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63A06E92643E0C700F8399C /* UPCarouselFlowLayout.swift */; };
 		A6CC4AC2263F405E00A52AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC4AC1263F405E00A52AD5 /* AppDelegate.swift */; };
 		A6CC4AC4263F405E00A52AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC4AC3263F405E00A52AD5 /* SceneDelegate.swift */; };
 		A6CC4AC9263F405E00A52AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC4AC7263F405E00A52AD5 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A63A06E92643E0C700F8399C /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		A6CC4ABE263F405E00A52AD5 /* TestGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CC4AC1263F405E00A52AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6CC4AC3263F405E00A52AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				A6CC4ADB263F488C00A52AD5 /* GalleryCells */,
 				A6CC4AC1263F405E00A52AD5 /* AppDelegate.swift */,
 				A6CC4AC3263F405E00A52AD5 /* SceneDelegate.swift */,
+				A63A06E92643E0C700F8399C /* UPCarouselFlowLayout.swift */,
 				A6CC4AC7263F405E00A52AD5 /* Main.storyboard */,
 				A6CC4AD7263F476100A52AD5 /* GalleryViewController.swift */,
 				A6CC4AE2263F4D8700A52AD5 /* GalleryData.swift */,
@@ -183,6 +186,7 @@
 				A6CC4ADE263F492E00A52AD5 /* ImageCell.swift in Sources */,
 				A6CC4AC2263F405E00A52AD5 /* AppDelegate.swift in Sources */,
 				A6CC4AE7263F538700A52AD5 /* GalleryModel.swift in Sources */,
+				A63A06EA2643E0C700F8399C /* UPCarouselFlowLayout.swift in Sources */,
 				A6CC4AC4263F405E00A52AD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
